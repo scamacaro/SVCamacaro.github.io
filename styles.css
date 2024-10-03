@@ -1,0 +1,84 @@
+body {
+    font-family: Arial, sans-serif; /* Set a clean font for the page */
+    text-align: center; /* Center text in the body */
+    margin: 0; /* Remove default margin */
+    padding: 0; /* Remove default padding */
+}
+
+nav {
+    background-color: #333; /* Set a dark background for the navigation */
+    color: white; /* Set the text color to white */
+    padding: 10px; /* Add padding for spacing */
+}
+
+nav ul {
+    list-style-type: none; /* Remove bullets from list */
+    padding: 0; /* Remove padding */
+}
+
+nav ul li {
+    display: inline; /* Display list items in a line */
+    margin-right: 15px; /* Space between items */
+}
+
+nav a {
+    color: white; /* Set link color to white */
+    text-decoration: none; /* Remove underline from links */
+}
+
+header {
+    background-color: #f4f4f4; /* Set a light background for the header */
+    padding: 20px; /* Add padding for spacing */
+}
+
+.color-generator {
+    display: flex; /* Use flexbox for layout */
+    justify-content: center; /* Center the items horizontally */
+    flex-wrap: wrap; /* Allow wrapping of items */
+    gap: 20px; /* Add space between items */
+    margin: 20px; /* Add margin around the container */
+}
+
+.color-pair {
+    display: flex; /* Use flexbox for layout */
+    flex-direction: column; /* Arrange items in a column */
+    align-items: center; /* Center items horizontally */
+}
+
+.color-display {
+    display: flex; /* Use flexbox for layout */
+    flex-direction: column; /* Arrange items in a column */
+    align-items: center; /* Center items horizontally */
+}
+
+.color-box {
+    width: 100px; /* Set width of the color box */
+    height: 100px; /* Set height of the color box */
+    border: 2px solid #000; /* Add a border to the color box */
+    margin: 5px 0; /* Add vertical spacing */
+}
+
+.color-hex {
+    margin: 5px 0; /* Add vertical spacing */
+}
+
+.palette {
+    margin-bottom: 20px; /* Space between palette sections */
+}
+
+.color-box-group {
+    display: flex; /* Use flexbox for layout */
+    gap: 10px; /* Space between color boxes */
+    justify-content: center; /* Center the color boxes */
+    margin: 10px 0; /* Add spacing around the color box group */
+}
+
+
+footer {
+    background-color: #333; /* Set a light background for the footer */
+    padding: 10px; /* Add padding for spacing */
+    position: relative; /* Position relative for footer */
+    bottom: 0; /* Align footer to the bottom */
+    width: 100%; /* Make footer full width */
+    color: #f4f4f4;
+}

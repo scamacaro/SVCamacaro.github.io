@@ -1,0 +1,80 @@
+<!DOCTYPE html> <!-- Declare the document type as HTML5 -->
+<html lang="en"> <!-- Start the HTML document, specifying the language as English -->
+<head>
+    <!-- Metadata and linking the CSS stylesheet -->
+    <meta charset="UTF-8"> <!-- Set the character encoding to UTF-8 for proper text rendering -->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"> <!-- Make the webpage responsive by setting the viewport width to device width -->
+    <title>Color Palette Generator</title> <!-- Set the title of the webpage that appears in the browser tab -->
+    <link rel="stylesheet" href="styles.css"> <!-- Link to the external CSS stylesheet for styling the HTML elements -->
+    <script>
+        // Function to update color boxes and their hex codes
+        function updateColorBox(colorInput, boxId, hexId) {
+            const colorValue = colorInput.value; // Get the color value from the input
+            document.getElementById(boxId).style.backgroundColor = colorValue; // Update the background color of the box
+            document.getElementById(hexId).innerText = colorValue; // Update the text to show the hex code
+        }
+    </script>
+</head>
+<body>
+
+    <!-- Navigation menu for popular color palettes and palette importance -->
+    <nav> <!-- Start of the navigation section -->
+        <ul>
+            <li><a href="index.html">Home</a></li> <!-- Home button added -->
+            <li><a href="popular_palettes.html">Popular Palettes</a></li> <!-- Unordered list for navigation links -->
+            <li><a href="importance.html">Importance of Color Palettes</a></li> <!-- Link to the importance of color palettes page -->
+            
+        </ul> <!-- End of the unordered list -->
+    </nav> <!-- End of the navigation section -->
+
+    <!-- Header section with title and instructions -->
+    <header> <!-- Start of the header section -->
+        <h1>Color Palette Generator</h1> <!-- Main title of the webpage -->
+        <p>Select colors below to generate your custom palette!</p> <!-- Instructional text for the user -->
+    </header> <!-- End of the header section -->
+
+    <!-- Main section where users will create and see the color palettes -->
+    <main>
+        <div class="color-generator"> <!-- Container for the color generation section -->
+            <div class="color-pair"> <!-- First pair of color input and display -->
+                <label for="color1">Color 1:</label> <!-- Label for the first color input -->
+                <!-- Color input for the first color with default value red -->
+                <!-- Event to call updateColorBox function on color change -->
+                <input type="color" id="color1" name="color1" value="#ff0000" 
+                       oninput="updateColorBox(this, 'box1', 'hex1')">
+
+                <div class="color-display"> <!-- Container for displaying the selected color and its hex code -->
+                    <div class="color-box" id="box1" title="Color 1"></div> <!-- Box to visually represent the selected color -->
+                    <p id="hex1" class="color-hex">#ff0000</p> <!-- Color code under box 1 -->
+                </div>
+            </div>
+
+            <div class="color-pair"> <!-- First pair of color input and display -->
+                <label for="color2">Color 2:</label>
+                <input type="color" id="color2" name="color2" value="#00ff00" 
+                       oninput="updateColorBox(this, 'box2', 'hex2')">
+                <div class="color-display">
+                    <div class="color-box" id="box2" title="Color 2"></div>
+                    <p id="hex2" class="color-hex">#00ff00</p> <!-- Color code under box 2 -->
+                </div>
+            </div>
+
+            <div class="color-pair"> <!-- Second pair of color input and display -->
+                <label for="color3">Color 3:</label> <!-- Label for the second color input -->
+                <input type="color" id="color3" name="color3" value="#0000ff" 
+                       oninput="updateColorBox(this, 'box3', 'hex3')">
+
+                <div class="color-display"> <!-- Container for displaying the selected color and its hex code -->
+                    <div class="color-box" id="box3" title="Color 3"></div>
+                    <p id="hex3" class="color-hex">#0000ff</p> <!-- Color code under box 3 -->
+                </div>
+            </div>
+        </div>
+    </main>
+
+    <!-- Footer section -->
+    <footer> <!-- Start of the footer section -->
+        <p>&copy; 2024 Color Palette Generator. All rights reserved.</p> <!-- Copyright notice -->
+    </footer> <!-- End of the footer section -->
+</body>
+</html>
